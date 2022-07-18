@@ -1,0 +1,19 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#jalopy-img {
+    max-width: 300px;
+}

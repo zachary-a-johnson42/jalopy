@@ -3,3 +3,4 @@
 const FRONTEND_VERSION = 0.0002;
 const APP_TITLE = "Jalopy Starter";
 const SKIP_STALE_TOKEN_CHECK = true;
+const JALOPY_IMG = "../../assets/jalopy1.jpg"
