@@ -13,7 +13,7 @@ export default function Home(props) {
         </header>
         <main>
             <div>
-                <img id="jalopy-img" src = "https://c8.alamy.com/comp/G3K7YD/jalopy-car-cars-race-racing-banger-stock-vintage-old-nostalgia-broken-G3K7YD.jpg" />
+                <img id="jalopy-img" src = "jalopy/assets/jalopy1.jpg" />
                 <p>
                     Welcome to my Jalopy application
                 </p>    
@@ -27,23 +27,29 @@ export function HomeEvents() {
     // TODO: use an enum for message type
     // const authority = getUserRole();
 
-    //add button event listener to change images
+    //getting the img tag so we can check what jalopy it's showing
     let jalopyImg = document.getElementById("jalopy-img");
+    // button to add event listener. on click, change to next image.
     let imgButton = document.getElementById("img-button");
 
-    imgButton.addEventListener("click", (e)=>{
-        if (jalopyImg.src === "https://c8.alamy.com/comp/G3K7YD/jalopy-car-cars-race-racing-banger-stock-vintage-old-nostalgia-broken-G3K7YD.jpg") {
-            jalopyImg.src === "https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fold-truck-rusted-abandoned-grunge-51371059.jpg&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Fphotos-images%2Fjalopy-car-truck.html&tbnid=vV3bIcKNQQ7k_M&vet=12ahUKEwiQht3RkYP5AhUakWoFHaHoC80QMygnegUIARClAg..i&docid=GFmRajewB3G48M&w=800&h=533&q=jalopy%20image%20free&ved=2ahUKEwiQht3RkYP5AhUakWoFHaHoC80QMygnegUIARClAg"
+    imgButton.addEventListener("click", ()=>{
+        console.log(jalopyImg.src)
+        let imgSrc = jalopyImg.getAttribute("src");
+
+        if(imgSrc === "jalopy/assets/jalopy1.jpg"){
+            jalopyImg.setAttribute("src", "jalopy/assets/jalopy2.jpg" )
         }
 
-        if(jalopyImg.src === "https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fold-truck-rusted-abandoned-grunge-51371059.jpg&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Fphotos-images%2Fjalopy-car-truck.html&tbnid=vV3bIcKNQQ7k_M&vet=12ahUKEwiQht3RkYP5AhUakWoFHaHoC80QMygnegUIARClAg..i&docid=GFmRajewB3G48M&w=800&h=533&q=jalopy%20image%20free&ved=2ahUKEwiQht3RkYP5AhUakWoFHaHoC80QMygnegUIARClAg") {
-            jalopyImg.src = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Ft%2Fjalopy-19897465.jpg&imgrefurl=https%3A%2F%2Fwww.stockfreeimages.com%2Fp1%2Fjalopy.html&tbnid=py9Nk3y6iPwf-M&vet=12ahUKEwiQht3RkYP5AhUakWoFHaHoC80QMyhbegUIARCsAQ..i&docid=3jli4EbIAoT5lM&w=246&h=160&q=jalopy%20image%20free&ved=2ahUKEwiQht3RkYP5AhUakWoFHaHoC80QMyhbegUIARCsAQ"
+        if(imgSrc === "jalopy/assets/jalopy2.jpg"){
+            jalopyImg.setAttribute("src", "jalopy/assets/jalopy3.jpg" )
         }
 
-        if(jalopyImg.src === "https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Ft%2Fjalopy-19897465.jpg&imgrefurl=https%3A%2F%2Fwww.stockfreeimages.com%2Fp1%2Fjalopy.html&tbnid=py9Nk3y6iPwf-M&vet=12ahUKEwiQht3RkYP5AhUakWoFHaHoC80QMyhbegUIARCsAQ..i&docid=3jli4EbIAoT5lM&w=246&h=160&q=jalopy%20image%20free&ved=2ahUKEwiQht3RkYP5AhUakWoFHaHoC80QMyhbegUIARCsAQ"){
-            jalopyImg.src = "https://c8.alamy.com/comp/G3K7YD/jalopy-car-cars-race-racing-banger-stock-vintage-old-nostalgia-broken-G3K7YD.jpg"
+        if(imgSrc === "jalopy/assets/jalopy3.jpg") {
+            jalopyImg.setAttribute("src", "jalopy/assets/jalopy1.jpg" )
+
         }
     })
+
 
 
 
