@@ -13,7 +13,7 @@ export default function Home(props) {
         </header>
         <main>
             <div>
-                <img id="jalopy-img" src = "jalopy/assets/jalopy1.jpg" />
+                <img id="jalopy-img" src = "/assets/jalopy1.jpg" />
                 <p>
                     Welcome to my Jalopy application
                 </p>    
